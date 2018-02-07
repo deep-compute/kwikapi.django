@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
-version = '0.0.1'
+version = '0.1'
 setup(
-    name="kwikapi_django",
+    name="kwikapi-django",
     version=version,
     packages=find_packages("."),
     package_dir={'kwikapi_django': 'django'},
@@ -14,7 +14,7 @@ setup(
     author='Deep Compute, LLC',
     author_email='contact@deepcompute.com',
     install_requires=[
-    'django==1.9',
+    'django==1.11',
     ],
     classifiers=[
         'Environment :: Web Environment',
