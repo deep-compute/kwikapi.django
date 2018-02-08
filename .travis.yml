@@ -17,8 +17,8 @@ deploy:
     - kwikapi/__init__.py
     - kwikapi/django/__init__.py
     - kwikapi/django/kwikapi_django.py
-  name: kwikapi.django-0.1
-  tag_name: 0.1
+  name: kwikapi.django-0.2
+  tag_name: 0.2
   on:
     repo: deep-compute/kwikapi.django
 - provider: pypi
