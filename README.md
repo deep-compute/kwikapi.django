@@ -12,7 +12,7 @@ $ pip install kwikapi[django]
 
 ### Create a Django project
 
-(Ref: https://docs.djangoproject.com/en/1.9/intro/tutorial01/)
+(Ref: https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 
 ```bash
 $ django-admin startproject django_kwikapi
@@ -57,7 +57,7 @@ urlpatterns = [
 from django.conf.urls import url, include
 
 from . import views
-from kwikapi_django import RequestHandler
+from kwikapi.django import RequestHandler
 
 urlpatterns = [
     url(r'api/', RequestHandler(views.api).handle_request),
@@ -74,17 +74,17 @@ from kwikapi import API
 from logging import Logger
 
 class BaseCalc():
-    def add(self, request, a: int, b: int):
+    def add(self, a: int, b: int) -> int:
         return a + b
 
-    def subtract(self, request, a: int, b: int):
+    def subtract(self, a: int, b: int) -> int:
         return a - b
 
 class StandardCalc():
-    def multiply(self, request, a: int, b: int):
+    def multiply(self, a: int, b: int) -> int:
         return a * b
 
-    def divide(self, request, a: int, b: int):
+    def divide(self, a: int, b: int) -> float:
         return a / b
 
 api = API(Logger, default_version='v1')
