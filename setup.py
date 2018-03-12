@@ -1,11 +1,10 @@
 from setuptools import setup, find_packages
 
-version = '0.2'
+version = '0.2.1'
 setup(
     name="kwikapi-django",
     version=version,
-    packages=find_packages("."),
-    package_dir={'kwikapi_django': 'django'},
+    packages=['kwikapi.django'],
     include_package_data=True,
     license='MIT License',  # example license
     description='Quickest way to build powerful HTTP APIs in Python',
