@@ -5,7 +5,7 @@ Quickly build API services to expose functionality in Python. `kwikapi.django` w
 ## Installation
 
 ```bash
-$ pip install kwikapi[django]
+$ pip3 install kwikapi[django]
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ $ django-admin startproject django_kwikapi
 ### Create an app in Django
 
 ```bash
-$ python manage.py startapp polls
+$ python3 manage.py startapp polls
 ```
 
 ### Add your app name to settings.py
@@ -95,9 +95,9 @@ api.register(StandardCalc(), "v2")
 ### Start Django
 
 ```bash
-$ python manage.py makemigrations
-$ python manage.py migrate
-$ python manage.py runserver 8888
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+$ python3 manage.py runserver 8888
 ```
 
 ### Make API request
