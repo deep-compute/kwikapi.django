@@ -34,7 +34,7 @@ class DjangoResponse(BaseResponse):
         self.headers = {}
 
     def write(self, data, proto, stream=False):
-        super().write(data, proto, stream=stream)
+        n, t = super().write(data, proto, stream=stream)
 
         data = self._data
         r = StreamingHttpResponse(data) if stream else HttpResponse(data)
@@ -46,6 +46,7 @@ class DjangoResponse(BaseResponse):
         self.headers = r
 
         self.raw_response = self._response = r
+        return n, t
 
     def flush(self):
         self._response.flush()
@@ -56,5 +57,12 @@ class DjangoResponse(BaseResponse):
         pass
 
 class RequestHandler(BaseRequestHandler):
+    PROTOCOL = BaseRequestHandler.DEFAULT_PROTOCOL
+
     def handle_request(self, request):
-        return super().handle_request(DjangoRequest(request))
+        fn = lambda: super().handle_request(DjangoRequest(request))
+
+        if self.api.threadpool:
+            self.api.threadpool.apply_async(fn)
+        else:
+            fn()
