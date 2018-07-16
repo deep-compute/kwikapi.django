@@ -61,9 +61,10 @@ class RequestHandler(BaseRequestHandler):
     PROTOCOL = BaseRequestHandler.DEFAULT_PROTOCOL
 
     def handle_request(self, request):
-        fn = lambda: super().handle_request(DjangoRequest(request))
+        '''fn = lambda: super().handle_request(DjangoRequest(request))
 
         if self.api.threadpool:
             self.api.threadpool.apply_async(fn)
         else:
-            fn()
+            fn()'''
+        return super().handle_request(DjangoRequest(request))
