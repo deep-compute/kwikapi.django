@@ -46,6 +46,7 @@ class DjangoResponse(BaseResponse):
         self.headers = r
 
         self.raw_response = self._response = r
+
         return n, t
 
     def flush(self):
