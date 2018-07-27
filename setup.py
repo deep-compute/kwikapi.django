@@ -1,6 +1,10 @@
 from setuptools import setup, find_packages
 
-version = '0.2.4'
+from desc import get_long_description
+
+long_description = get_long_description()
+
+version = '0.2.5'
 setup(
     name="kwikapi-django",
     version=version,
@@ -8,6 +12,7 @@ setup(
     include_package_data=True,
     license='MIT License',  # example license
     description='Quickest way to build powerful HTTP APIs in Python',
+    long_description=long_description,
     url='https://github.com/deep-compute/kwikapi.django',
     download_url="https://github.com/deep-compute/kwikapi.django/tarball/%s" % version,
     author='Deep Compute, LLC',
