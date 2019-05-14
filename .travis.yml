@@ -10,8 +10,8 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: szU2C7KG3GzWO6x5RleHRf+/OpKvZWpN9Z+JPYb0xr+oSCQfms5/kMG8tTBUxjm5exv6xRsnknAa0vL+DqyeNEo8bPBYt3ZoDbB9pTqZhYuKSqDQnAP9N7xrmaXK7AVtuY07zDVToI6M0pWaqn+7A5YG0c9lqt3EuaCbSosqShzoDEZvO9bY1q4tsmjrP7hC28phsOuXCRzBBSabXEueyNeJInDTVFjfxp+yD1du3zIC1Qy4hi1rurTROSogKVWaChVcR9JJdAdawG/5J4QULtuma8fBvo2GhrJSH6ofTsLI1LXo64IixXqhb+FoAbABMjDkukjOXfOgiovGeay5n1PFuenFvQY3T3OscGJId16HeQPJ8BPd6U1k0b57Ij9Fl2nraUSIVpoC3tpBfyhMfXyF08ZEfXIJJwQl1BU96EZXt7PpgY7Mh9MwUnKh6SZ6E9ykwp1jVQ+YSS47u5nWpdAr6DYkjrCfwxw9hOWqH1tgyiSNw1u0xpA7qWUAl8JrEQrrq1EG9buGrH3aeF0p4eyTg38IdqQGhXNWLVJzo4U+QdVT930hDE6CCwhvc5otFiBKqED3ZAidAOJOq4ECZLPOGc8YIvd/4LXZTsaZEfQ1ovAqJnxTOvS5TnarAGI4CO8OvyqTN3nRdzrcMcYkdK5xyoG/jqHPD2jB3H/5Sls=
-  name: kwikapi.django-0.2.5
-  tag_name: 0.2.5
+  name: kwikapi.django-0.2.6
+  tag_name: 0.2.6
   on:
     repo: deep-compute/kwikapi.django
 - provider: pypi

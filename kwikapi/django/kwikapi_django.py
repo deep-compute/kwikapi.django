@@ -76,7 +76,7 @@ class DjangoResponse(BaseResponse):
     def __init__(self, request):
         self._request = request
         self.raw_response = self._response = None
-        self.headers = {}
+        self._headers = {}
 
     def write(self, data, proto, stream=False):
         n, t = super().write(data, proto, stream=stream)
@@ -84,11 +84,8 @@ class DjangoResponse(BaseResponse):
         data = self._data
         r = StreamingHttpResponse(data) if stream else HttpResponse(data)
 
-        for k, v in self.headers.items():
+        for k, v in self._headers.items():
             r[k] = v
-
-        # TODO: why this?
-        self.headers = r
 
         self.raw_response = self._response = r
 
@@ -101,6 +98,10 @@ class DjangoResponse(BaseResponse):
         # Django response doesn't support a close method
         # so we do nothing here.
         pass
+
+    @property
+    def headers(self):
+        return self._headers
 
 class RequestHandler(BaseRequestHandler):
     PROTOCOL = BaseRequestHandler.DEFAULT_PROTOCOL
