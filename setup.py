@@ -18,7 +18,7 @@ setup(
     author='Deep Compute, LLC',
     author_email='contact@deepcompute.com',
     install_requires=[
-    'django==1.11.18',
+    'django==1.11.21',
     ],
     classifiers=[
         'Environment :: Web Environment',
