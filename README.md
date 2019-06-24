@@ -87,7 +87,7 @@ class StandardCalc():
     def divide(self, a: int, b: int) -> float:
         return a / b
 
-api = API(Logger, default_version='v1')
+api = API(log=Logger, default_version='v1')
 api.register(BaseCalc(), 'v1')
 api.register(StandardCalc(), "v2")
 ```
