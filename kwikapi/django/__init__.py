@@ -1,3 +1,1 @@
-from .kwikapi_django import RequestHandler, \
-        BasicAuthenticator, \
-        SessionAuthenticator
+from .kwikapi_django import RequestHandler, BasicAuthenticator, SessionAuthenticator

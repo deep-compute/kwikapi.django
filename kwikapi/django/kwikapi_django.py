@@ -12,23 +12,26 @@ from kwikapi import BaseRequestHandler, BaseAuthAPI
 from kwikapi import BearerServerAuthenticator
 from kwikapi import BasicServerAuthenticator
 
+
 class BasicAuthenticator(BasicServerAuthenticator):
-    USER_ATTRS = ('id', 'email', 'first_name', 'last_name')
+    USER_ATTRS = ("id", "email", "first_name", "last_name")
 
     def authenticate(self, request):
         auth = super().authenticate(request)
-        username = auth.username.decode('utf8')
-        password = auth.password.decode('utf8')
+        username = auth.username.decode("utf8")
+        password = auth.password.decode("utf8")
 
-        user = authenticate(request=request.raw_request,
-            username=username, password=password)
+        user = authenticate(
+            request=request.raw_request, username=username, password=password
+        )
 
         if not user:
             return auth
 
         auth.is_authenticated = True
-        auth.update({ a: getattr(user, a) for a in self.USER_ATTRS })
+        auth.update({a: getattr(user, a) for a in self.USER_ATTRS})
         return auth
+
 
 class SessionAuthenticator(BearerServerAuthenticator):
     # FIXME: this needs to be completed
@@ -36,6 +39,7 @@ class SessionAuthenticator(BearerServerAuthenticator):
     def authenticate(self, request):
         auth = super().authenticate(request)
         session_id = auth.token
+
 
 class DjangoRequest(BaseRequest):
     def __init__(self, request):
@@ -48,10 +52,10 @@ class DjangoRequest(BaseRequest):
         hdrs = CaseInsensitiveDict()
 
         for k, v in self._request.META.items():
-            if not k.startswith('HTTP_'):
+            if not k.startswith("HTTP_"):
                 continue
 
-            k = '-'.join(k.split('_')[1:])
+            k = "-".join(k.split("_")[1:])
             hdrs[k] = v
 
         return hdrs
@@ -71,6 +75,7 @@ class DjangoRequest(BaseRequest):
     @property
     def headers(self):
         return self._headers
+
 
 class DjangoResponse(BaseResponse):
     def __init__(self, request):
@@ -102,6 +107,7 @@ class DjangoResponse(BaseResponse):
     @property
     def headers(self):
         return self._headers
+
 
 class RequestHandler(BaseRequestHandler):
     PROTOCOL = BaseRequestHandler.DEFAULT_PROTOCOL
