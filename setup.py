@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from desc import get_long_description
+from .desc import get_long_description
 
 long_description = get_long_description()
 
