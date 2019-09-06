@@ -13,6 +13,8 @@ deploy:
   user: deepcompute
   password:
     secure: RHAxD4fsh0I6kraDrJjyY4PmqJ4qi3TrxkroyBuTUyknADHIYBatEwzPj6+VPNYRs9V4Jfa/S4JNoOdLFmA6DEwfyZ9QC2oYuCi8JImDxcbram4EzSVh2m7pjHeeBLBFSlNv5T5B5eKizS7RRjUn2S0KdTu2Bgp4mmxh8VwhHBrG9WeUVtBfNrkIF9klu7Va/4toJJ4JIFFTqhez/d+dDfs62aFPWE+MXpakmiT0cSqsWgNcZyIccuMXH5yMH1JhMEpPTDAxOV5hS8tolHGemMSffvTLV2uJA1r2es+6+kCBS60GWUNw/ye7BPzYJslKVyAu/VlI6kQgkji8k7jo7dAdrHVrLzS9x4BqaVi1FWh1sMuIVnoqSCCmoeIAb8xbzn5/sL/VXhwC68PKvVTDKch8AnSKFv+k6Ss00PpZLLoKTnRA4sxCo4MfInCVEuWDyVvQLGOUUBDlyJRBoT78oJmnETZ87pkvIOZeLDKuJykNHGwg/7TN3Z/8SHbe8VJ+055RMiS7zEWjz9/hqxQ4ZmVgoBb+3unATxO6SbCeF+FAythnfiMD4nlK5Z4T1UMhgHmOb44PwKietOpsW1Y+t2/IkRKZTqRucl1Xdrlsj7IUBPTXnMYcjJv0HPF0k5ZE82gYlIqYNd3z8kO7Zp86ZQKBtb0HBdYKaKGfWe1FGHE=
+  true:
+      branch: change-in-import
 - provider: pypi
   distributions: sdist bdist_wheel
   user: deepcompute
