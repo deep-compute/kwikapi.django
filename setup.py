@@ -13,6 +13,7 @@ setup(
     license="MIT License",  # example license
     description="Quickest way to build powerful HTTP APIs in Python",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/deep-compute/kwikapi.django",
     download_url="https://github.com/deep-compute/kwikapi.django/tarball/%s" % version,
     author="Deep Compute, LLC",
