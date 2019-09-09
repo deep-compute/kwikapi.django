@@ -3,8 +3,8 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: szU2C7KG3GzWO6x5RleHRf+/OpKvZWpN9Z+JPYb0xr+oSCQfms5/kMG8tTBUxjm5exv6xRsnknAa0vL+DqyeNEo8bPBYt3ZoDbB9pTqZhYuKSqDQnAP9N7xrmaXK7AVtuY07zDVToI6M0pWaqn+7A5YG0c9lqt3EuaCbSosqShzoDEZvO9bY1q4tsmjrP7hC28phsOuXCRzBBSabXEueyNeJInDTVFjfxp+yD1du3zIC1Qy4hi1rurTROSogKVWaChVcR9JJdAdawG/5J4QULtuma8fBvo2GhrJSH6ofTsLI1LXo64IixXqhb+FoAbABMjDkukjOXfOgiovGeay5n1PFuenFvQY3T3OscGJId16HeQPJ8BPd6U1k0b57Ij9Fl2nraUSIVpoC3tpBfyhMfXyF08ZEfXIJJwQl1BU96EZXt7PpgY7Mh9MwUnKh6SZ6E9ykwp1jVQ+YSS47u5nWpdAr6DYkjrCfwxw9hOWqH1tgyiSNw1u0xpA7qWUAl8JrEQrrq1EG9buGrH3aeF0p4eyTg38IdqQGhXNWLVJzo4U+QdVT930hDE6CCwhvc5otFiBKqED3ZAidAOJOq4ECZLPOGc8YIvd/4LXZTsaZEfQ1ovAqJnxTOvS5TnarAGI4CO8OvyqTN3nRdzrcMcYkdK5xyoG/jqHPD2jB3H/5Sls=
-  name: kwikapi.django-0.2.7
-  tag_name: 0.2.7
+  name: kwikapi.django-0.2.8
+  tag_name: 0.2.8
   true:
     repo: deep-compute/kwikapi.django
 - provider: pypi
@@ -14,7 +14,8 @@ deploy:
   password:
     secure: RHAxD4fsh0I6kraDrJjyY4PmqJ4qi3TrxkroyBuTUyknADHIYBatEwzPj6+VPNYRs9V4Jfa/S4JNoOdLFmA6DEwfyZ9QC2oYuCi8JImDxcbram4EzSVh2m7pjHeeBLBFSlNv5T5B5eKizS7RRjUn2S0KdTu2Bgp4mmxh8VwhHBrG9WeUVtBfNrkIF9klu7Va/4toJJ4JIFFTqhez/d+dDfs62aFPWE+MXpakmiT0cSqsWgNcZyIccuMXH5yMH1JhMEpPTDAxOV5hS8tolHGemMSffvTLV2uJA1r2es+6+kCBS60GWUNw/ye7BPzYJslKVyAu/VlI6kQgkji8k7jo7dAdrHVrLzS9x4BqaVi1FWh1sMuIVnoqSCCmoeIAb8xbzn5/sL/VXhwC68PKvVTDKch8AnSKFv+k6Ss00PpZLLoKTnRA4sxCo4MfInCVEuWDyVvQLGOUUBDlyJRBoT78oJmnETZ87pkvIOZeLDKuJykNHGwg/7TN3Z/8SHbe8VJ+055RMiS7zEWjz9/hqxQ4ZmVgoBb+3unATxO6SbCeF+FAythnfiMD4nlK5Z4T1UMhgHmOb44PwKietOpsW1Y+t2/IkRKZTqRucl1Xdrlsj7IUBPTXnMYcjJv0HPF0k5ZE82gYlIqYNd3z8kO7Zp86ZQKBtb0HBdYKaKGfWe1FGHE=
   true:
-      branch: change-in-import
+      branch: master
+      tags: false
 - provider: pypi
   distributions: sdist bdist_wheel
   user: deepcompute

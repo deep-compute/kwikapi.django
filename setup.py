@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open("README.md") as f:
     long_description = f.read()
 
-version = "0.2.7"
+version = "0.2.8"
 setup(
     name="kwikapi-django",
     version=version,
