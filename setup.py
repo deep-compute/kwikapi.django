@@ -1,10 +1,9 @@
 from setuptools import setup, find_packages
 
-from desc import get_long_description
+with open("README.md") as f:
+    long_description = f.read()
 
-long_description = get_long_description()
-
-version = "0.2.6"
+version = "0.2.8"
 setup(
     name="kwikapi-django",
     version=version,
