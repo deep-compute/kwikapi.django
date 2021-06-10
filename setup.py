@@ -17,7 +17,7 @@ setup(
     download_url="https://github.com/deep-compute/kwikapi.django/tarball/%s" % version,
     author="Deep Compute, LLC",
     author_email="contact@deepcompute.com",
-    install_requires=["django==1.11.29", "kwikapi==0.2.8"],
+    install_requires=["django==2.2.24", "kwikapi==0.2.8"],
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
